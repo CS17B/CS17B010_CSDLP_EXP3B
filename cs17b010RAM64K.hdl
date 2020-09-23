@@ -1,0 +1,14 @@
+CHIP cs17b010RAM64K {
+    IN in[16], load, address[16];
+    OUT out[16];
+
+    PARTS:
+    DMux(in=load,sel=address[15],a=a,b=b);
+
+    cs17b010RAM32K(in=in,load=a,address=address[0..14],out=oa);
+    cs17b010RAM32K(in=in,load=b,address=address[0..14],out=ob);
+   
+   
+  
+   Mux16(a=oa,b=ob,sel=address[15],out=out);
+}

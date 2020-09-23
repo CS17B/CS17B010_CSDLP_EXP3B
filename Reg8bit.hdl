@@ -1,0 +1,42 @@
+CHIP Reg8bit {
+    IN in[8], load;
+    OUT out[8];
+
+    PARTS:
+    Mux(a=c,b=in[0],sel=load,out=d);
+    DFF(in=d,out=out[0],out=c);
+    Mux(a=e,b=in[1],sel=load,out=f);
+    DFF(in=f,out=out[1],out=e);
+    Mux(a=g,b=in[2],sel=load,out=h);
+    DFF(in=h,out=out[2],out=g);
+    Mux(a=i,b=in[3],sel=load,out=j);
+    DFF(in=j,out=out[3],out=i);
+    Mux(a=k,b=in[4],sel=load,out=l);
+    DFF(in=l,out=out[4],out=k);
+    Mux(a=m,b=in[5],sel=load,out=n);
+    DFF(in=n,out=out[5],out=m);
+    Mux(a=o,b=in[6],sel=load,out=p);
+    DFF(in=p,out=out[6],out=o);
+    Mux(a=q,b=in[7],sel=load,out=r);
+    DFF(in=r,out=out[7],out=q);
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
